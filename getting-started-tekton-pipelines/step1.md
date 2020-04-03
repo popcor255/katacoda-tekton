@@ -9,16 +9,16 @@ This guide helps you get started with Tekton Pipelines by walking you through a 
 
 ## Installation
 
-We already installed minikube for you. Check that it is properly installed, by running the minikube version command:
+We already installed Minikube for you. Check that it is properly installed, by running the Minikube version command:
 
-minikube version{{execute}}
+`minikube version`{{execute}}
 
-Start the cluster, by running the minikube start command:
+Start the cluster, by running the Minikube start command:
 
-minikube start{{execute}}
+`minikube start`{{execute}}
 
 Install Tekton Pipelines onto your cluster:
 
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/latest/release.yaml
+`kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/latest/release.yaml`{{execute}}
 
 Great! You now have a running Kubernetes cluster with Tekton Pipelines.
