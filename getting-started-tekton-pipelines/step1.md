@@ -2,10 +2,10 @@
 
 This guide helps you get started with Tekton Pipelines by walking you through a simple `Hello World` tutorial. The tutorial shows you how to:
 
-- Create a `Task`	
-- Create a `Pipeline` containing your `Tasks`	
-- Use a `TaskRun` to instantiate and execute a `Task` outside of a `Pipeline`	
-- Use a `PipelineRun` to instantiate and run a `Pipeline` containing your `Tasks`
+- Create a **Task**	
+- Create a **Pipeline** containing your **Tasks**
+- Use a **TaskRun** to instantiate and execute a **Task** outside of a **Pipeline**
+- Use a **PipelineRun** to instantiate and run a **Pipeline** containing your **Tasks**
 
 ## Installation
 
