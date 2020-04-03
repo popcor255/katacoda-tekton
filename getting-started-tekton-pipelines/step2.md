@@ -1,4 +1,4 @@
-## Creating and running a `Task`
+## Creating and running a Task
 
 A **Task** defines a series of **Steps** that run in a desired order and complete a set amount of build work. Every **Task** runs as a Pod on your Kubernetes cluster with each **Step** as its own container. For example, the following **Task** outputs "Hello World":
 
