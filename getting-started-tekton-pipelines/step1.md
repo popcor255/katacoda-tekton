@@ -17,10 +17,12 @@ Start the cluster, by running the Minikube start command:
 
 `minikube start`{{execute}}
 
-Install Tekton Pipelines and Tekton CLI:
+Install Tekton CLI:
 
-`curl -LO https://github.com/tektoncd/cli/releases/download/v0.8.0/tektoncd-cli-0.8.0_Linux-64bit.deb`{{execute}}
-`dpkg -i tektoncd-cli-0.8.0_Linux-64bit.deb`{{execute}}
+`curl -LO https://github.com/tektoncd/cli/releases/download/v0.8.0/tektoncd-cli-0.8.0_Linux-64bit.deb && dpkg -i tektoncd-cli-0.8.0_Linux-64bit.deb` {{execute}}
+
+Install Tekton Pipelines:
+
 `kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/latest/release.yaml`{{execute}}
 
 Great! You now have a running Kubernetes cluster with Tekton Pipelines.
