@@ -40,3 +40,6 @@ spec:
 
 Once you saved the task-run apply it to the Kubernetes Cluster:
 `kubectl apply -f echo-hello-world-task-run.yaml`{{execute}}
+
+To check the status of your task, use the following command:
+`tkn taskrun describe echo-hello-world-task-run`{{execute}}
