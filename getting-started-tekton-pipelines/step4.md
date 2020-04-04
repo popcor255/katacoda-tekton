@@ -74,7 +74,7 @@ spec:
 Before you can create your `TaskRun`, you must create a `secret` to push your image
 to your desired image registry.
 
-**Note** You can get your Docker access token at [Docker Hub](https://hub.docker.com/settings/security).
+**Note** You can get your Docker access token at [https://hub.docker.com/settings/security)](https://hub.docker.com/settings/security).
 
 ```bash
 kubectl create secret docker-registry regcred \
@@ -84,7 +84,7 @@ kubectl create secret docker-registry regcred \
                     --docker-email=<your-email>
 ```
 
-You must create a `ServiceAccount` that uses this `secret` so you can reference it in your `TaskRun`.
+You must create a **ServiceAccount** that uses this **secret** so you can reference it in your **TaskRun**.
 
 ```yaml
 apiVersion: v1
