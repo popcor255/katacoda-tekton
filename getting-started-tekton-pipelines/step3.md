@@ -9,8 +9,19 @@ and out of your **Task**. The following are examples of the most commonly needed
 The **git resource** specifies a git repository with
 a specific revision from which the **Task** will pull the source code:
 
-The **image resource** specifies the repository to which the image built by the **Task** will be pushed:
-
+```yaml
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: hello-world-git
+spec:
+  type: git
+  params:
+    - name: revision
+      value: master
+    - name: url
+      value: https://github.com/popcor255/python-flask-docker-hello-world
+```
 
 ```yaml
 apiVersion: tekton.dev/v1alpha1
@@ -24,16 +35,5 @@ spec:
       value: master
     - name: url
       value: https://github.com/popcor255/python-flask-docker-hello-world
----
-apiVersion: tekton.dev/v1alpha1
-kind: PipelineResource
-metadata:
-  name: hello-world-git
-spec:
-  type: git
-  params:
-    - name: revision
-      value: master
-    - name: url
-      value: https://github.com/popcor255/python-flask-docker-hello-world
 ```
+
