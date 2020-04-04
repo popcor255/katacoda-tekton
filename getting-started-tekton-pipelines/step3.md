@@ -7,11 +7,13 @@ Use one or more **PipelineResources** to define the artifacts you want to pass i
 and out of your **Task**. The following are examples of the most commonly needed resources.
 
 The **git resource** specifies a git repository with
-a specific revision from which the **Task** will pull the source code:
+a specific revision from which the **Task** will pull the source code.
 
-The **image resource** specifies the repository to which the image built by the **Task** will be pushed:
+The **image resource** specifies the repository to which the image built by the **Task** will be pushed.
 
-Create these files in the editor and apply them with kubectl:
+Create these files in the editor and apply them with kubectl.
+
+Make sure to change DOCKER_HUB_USERNAME with your username.
 
 ```yaml
 apiVersion: tekton.dev/v1alpha1
@@ -36,6 +38,6 @@ spec:
   type: image
   params:
     - name: url
-      value: docker.io/<your docker hub username>/hello-world
+      value: docker.io/DOCKER_HUB_USERNAME/hello-world
 ```
 
