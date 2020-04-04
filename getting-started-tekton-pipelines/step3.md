@@ -13,7 +13,12 @@ The **image resource** specifies the repository to which the image built by the 
 
 Create these files in the editor and apply them with kubectl.
 
-Make sure to change DOCKER_HUB_USERNAME with your username.
+Make sure to change **DOCKER_HUB_USERNAME** with your username.
+
+Create this file:
+`touch hello-world-git.yaml`{{execute}}
+
+Go to the **hello-world-git.yaml**  editor and copy and paste this yaml:
 
 ```yaml
 apiVersion: tekton.dev/v1alpha1
@@ -28,6 +33,12 @@ spec:
     - name: url
       value: https://github.com/popcor255/python-flask-docker-hello-world
 ```
+
+
+Create this file:
+`touch hello-world-image.yaml`{{execute}}
+
+Go to the **hello-world-image.yaml**  editor and copy and paste this yaml:
 
 ```yaml
 apiVersion: tekton.dev/v1alpha1

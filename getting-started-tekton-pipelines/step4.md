@@ -9,7 +9,7 @@ You will need this task in the next step.
 Create this file:
 `build-and-push-docker-image-from-git-task-run.yaml`{{execute}}
 
-Go to the **echo-hello-world-task.yaml**  editor and copy and paste this yaml:
+Go to the **build-and-push-docker-image-from-git-task-run.yaml**  editor and copy and paste this yaml:
 
 
 ```yaml

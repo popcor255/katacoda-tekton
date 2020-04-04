@@ -7,7 +7,9 @@ along with the corresponding inputs and outputs for each **Task**. You can speci
 **Task** is used as an input for the next `Task` using the [`from`](pipelines.md#from) property.
 `Pipelines` offer the same variable substitution as `Tasks`.
 
-Below is an example definition of a `Pipeline`:
+Create this file: `tutorial-pipeline.yaml`{{execute}}
+
+Go to the **tutorial-pipeline.yaml**  editor and copy and paste this yaml:
 
 ```yaml
 apiVersion: tekton.dev/v1beta1
@@ -47,6 +49,10 @@ spec:
 ```
 
 The above `Pipeline` is referencing a `Task` called `deploy-using-kubectl` defined as follows:
+
+Create this file: `deploy-using-kubectl-task.yaml`{{execute}}
+
+Go to the **deploy-using-kubectl-task.yaml**  editor and copy and paste this yaml:
 
 ```yaml
 apiVersion: tekton.dev/v1beta1
@@ -93,3 +99,4 @@ spec:
         - "-f"
         - "$(params.PATH)"
 ```
+
