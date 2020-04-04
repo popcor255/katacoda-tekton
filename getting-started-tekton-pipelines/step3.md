@@ -1,6 +1,6 @@
 ### Specifying Task inputs and outputs
 
-In more complex scenarios, a ***Task** requires you to define inputs and outputs. For example, a
+In more complex scenarios, a **Task** requires you to define inputs and outputs. For example, a
 **Task** could fetch source code with a Dockerfile and build a Docker image from it.
 
 Use one or more **PipelineResources** to define the artifacts you want to pass in
@@ -34,5 +34,5 @@ spec:
   type: image
   params:
     - name: url
-      value: docker.io/<your docker hub username>/hello-world
+      value: docker.io/**DOCKER_HUB_USERNAME**/hello-world
 ```
