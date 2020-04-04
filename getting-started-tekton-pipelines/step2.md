@@ -2,8 +2,10 @@
 
 A **Task** defines a series of **Steps** that run in a desired order and complete a set amount of build work. Every **Task** runs as a Pod on your Kubernetes cluster with each **Step** as its own container. For example, the following **Task** outputs "Hello World":
 
-Open a vi editor and copy and paste this yaml:
-`vi echo-hello-world-task.yaml`{{execute}}
+Create this file:
+`touch echo-hello-world-task.yaml`{{execute}}
+
+Go to the **echo-hello-world-task.yaml**  editor and copy and paste this yaml:
 
 ```yaml
 apiVersion: tekton.dev/v1beta1
@@ -25,8 +27,11 @@ Once you saved the task apply it to the Kubernetes Cluster:
 
 To run this **Task**, instantiate it using a **TaskRun**:
 
-Open a vi editor and copy and paste this yaml:
-`vi echo-hello-world-task-run.yaml`{{execute}}
+Create this file:
+`touch echo-hello-world-task.yaml`{{execute}}
+
+
+Go to the **echo-hello-world-task.yaml** in the editor and copy and paste this yaml:
 
 ```yaml
 apiVersion: tekton.dev/v1beta1
