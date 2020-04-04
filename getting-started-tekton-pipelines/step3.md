@@ -11,6 +11,8 @@ a specific revision from which the **Task** will pull the source code:
 
 The **image resource** specifies the repository to which the image built by the **Task** will be pushed:
 
+Create these files in the editor and apply them with kubectl:
+
 ```yaml
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
