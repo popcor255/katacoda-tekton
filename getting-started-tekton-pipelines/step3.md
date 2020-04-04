@@ -34,6 +34,9 @@ spec:
       value: https://github.com/popcor255/python-flask-docker-hello-world
 ```
 
+Once you saved this file you can apply it to the Kubernetes Cluster:
+`kubectl apply -f hello-world-git.yaml`{{execute}}
+
 
 Create this file:
 `touch hello-world-image.yaml`{{execute}}
@@ -51,4 +54,7 @@ spec:
     - name: url
       value: docker.io/DOCKER_HUB_USERNAME/hello-world
 ```
+
+Once you saved this file you can apply it to the Kubernetes Cluster:
+`kubectl apply -f hello-world-image.yaml`{{execute}}
 

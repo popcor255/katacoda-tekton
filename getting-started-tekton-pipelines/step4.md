@@ -71,6 +71,9 @@ spec:
       emptyDir: {}
 ```
 
+Once you saved this file you can apply it to the Kubernetes Cluster:
+`kubectl apply -f build-and-push-docker-image-from-git-task-run.yaml`{{execute}}
+
 Before you can create your `TaskRun`, you must create a `secret` to push your image
 to your desired image registry.
 
@@ -95,3 +98,5 @@ secrets:
   - name: regcred
 ```
 
+Once you saved this file you can apply it to the Kubernetes Cluster:
+`kubectl apply -f tutorial-service.yaml`{{execute}}

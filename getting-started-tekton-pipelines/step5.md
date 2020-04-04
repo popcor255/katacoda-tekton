@@ -30,6 +30,10 @@ spec:
           name: hello-world-image
 ```
 
+Once you saved this file you can apply it to the Kubernetes Cluster:
+`kubectl apply -f build-and-push-docker-image-from-git-task-run.yaml`{{execute}}
+
+
 ### Tips
 
 To examine the resources you've created so far, use the following command

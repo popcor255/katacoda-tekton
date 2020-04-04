@@ -1,6 +1,4 @@
-
-
-## Creating and running a `Pipeline`
+## Creating a Pipeline
 
 A **Pipeline** defines an ordered series of **Tasks** that you want to execute
 along with the corresponding inputs and outputs for each **Task**. You can specify whether the output of one
@@ -47,6 +45,10 @@ spec:
             from:
               - build-and-push-to-dockerhub
 ```
+
+Once you saved this file you can apply it to the Kubernetes Cluster:
+`kubectl apply -f tutorial-pipeline.yaml`{{execute}}
+
 
 The above **Pipeline** is referencing a **Task** called **deploy-using-kubectl** defined as follows:
 
@@ -99,4 +101,7 @@ spec:
         - "-f"
         - "$(params.PATH)"
 ```
+
+Once you saved this file you can apply it to the Kubernetes Cluster:
+`kubectl apply -f deploy-using-kubectl-task.yaml`{{execute}}
 
