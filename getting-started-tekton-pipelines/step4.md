@@ -4,7 +4,13 @@ In the following example, you can see a `Task` definition with the `git` input a
 introduced earlier. The arguments of the `Task` command support variable substitution so that
 the `Task` definition is constant and the value of parameters can change during runtime.
 
-You will need this task in the next steps. Create this task in the editor and apply it:
+You will need this task in the next step.
+
+Create this file:
+`build-and-push-docker-image-from-git-task-run.yaml`{{execute}}
+
+Go to the **echo-hello-world-task.yaml**  editor and copy and paste this yaml:
+
 
 ```yaml
 apiVersion: tekton.dev/v1beta1
@@ -66,9 +72,9 @@ spec:
 ```
 
 Before you can create your `TaskRun`, you must create a `secret` to push your image
-to your desired image registry:
+to your desired image registry.
 
-**Note:** You can get your Docker access token at [Docker Hub](https://hub.docker.com/settings/security).
+**Note** You can get your Docker access token at [Docker Hub](https://hub.docker.com/settings/security).
 
 ```bash
 kubectl create secret docker-registry regcred \
@@ -78,7 +84,7 @@ kubectl create secret docker-registry regcred \
                     --docker-email=<your-email>
 ```
 
-You must create a `ServiceAccount` that uses this `secret` so you can reference it in your `TaskRun`:
+You must create a `ServiceAccount` that uses this `secret` so you can reference it in your `TaskRun`.
 
 ```yaml
 apiVersion: v1

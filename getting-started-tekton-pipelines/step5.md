@@ -1,9 +1,14 @@
 ### Running your Task
 
-You are now ready to make another **TaskRun**!
+You are now ready to use the **Task** for another **TaskRun**!
 
 A **TaskRun** binds the inputs and outputs to already defined **PipelineResources**, sets values
 for variable substitution parameters, and executes the **Steps** in the **Task**.
+
+Create this file:
+`build-and-push-docker-image-from-git-task-run.yaml`{{execute}}
+
+Go to the **echo-hello-world-task.yaml**  editor and copy and paste this yaml:
 
 ```yaml
 apiVersion: tekton.dev/v1beta1
@@ -25,9 +30,7 @@ spec:
           name: hello-world-image
 ```
 
-Save the YAML files that contain your Task, and **PipelineResource** definitions and apply them using the following command
-
-`kubectl apply -f <name-of-file.yaml>`{{copy}}
+### Tips
 
 To examine the resources you've created so far, use the following command
 
