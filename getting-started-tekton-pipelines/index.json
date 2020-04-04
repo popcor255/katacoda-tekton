@@ -38,7 +38,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "editor-terminal-split"
   },
   "backend": {
     "imageid": "minikube-running"
