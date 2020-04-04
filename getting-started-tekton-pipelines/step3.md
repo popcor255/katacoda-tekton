@@ -26,16 +26,15 @@ spec:
 The **image resource** specifies the repository to which the image built by the **Task** will be pushed:
 
 ```yaml
-
-apiVersion: tekton.dev/v1alpha1
-kind: PipelineResource
-metadata:
-  name: hello-world-git
-spec:
-  type: git
-  params:
-    - name: revision
-      value: master
-    - name: url
-      value: https://github.com/popcor255/python-flask-docker-hello-world
+    apiVersion: tekton.dev/v1alpha1
+    kind: PipelineResource
+    metadata:
+    name: hello-world-git
+    spec:
+    type: git
+    params:
+        - name: revision
+        value: master
+        - name: url
+        value: https://github.com/popcor255/python-flask-docker-hello-world
 ```
