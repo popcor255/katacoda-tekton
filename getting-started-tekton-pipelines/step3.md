@@ -34,5 +34,5 @@ spec:
   type: image
   params:
     - name: url
-      value: docker.io/**DOCKER_HUB_USERNAME**/hello-world
+      value: docker.io/DOCKER_HUB_USERNAME/hello-world
 ```
