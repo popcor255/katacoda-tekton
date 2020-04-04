@@ -94,3 +94,4 @@ metadata:
 secrets:
   - name: regcred
 ```
+
