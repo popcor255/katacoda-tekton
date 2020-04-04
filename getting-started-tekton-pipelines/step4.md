@@ -7,10 +7,9 @@ the `Task` definition is constant and the value of parameters can change during 
 You will need this task in the next step.
 
 Create this file:
-`build-and-push-docker-image-from-git-task-run.yaml`{{execute}}
+`touch build-and-push-docker-image-from-git-task-run.yaml`{{execute}}
 
-Go to the **build-and-push-docker-image-from-git-task-run.yaml**  editor and copy and paste this yaml:
-
+Go to the **build-and-push-docker-image-from-git-task-run.yaml** editor and copy and paste this yaml:
 
 ```yaml
 apiVersion: tekton.dev/v1beta1
@@ -88,6 +87,11 @@ kubectl create secret docker-registry regcred \
 ```
 
 You must create a **ServiceAccount** that uses this **secret** so you can reference it in your **TaskRun**.
+
+Create this file:
+`touch tutorial-service-account.yaml`{{execute}}
+
+Go to the **tutorial-service-account.yaml** editor and copy and paste this yaml:
 
 ```yaml
 apiVersion: v1

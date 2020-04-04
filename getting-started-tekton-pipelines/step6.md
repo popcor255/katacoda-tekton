@@ -5,7 +5,7 @@ along with the corresponding inputs and outputs for each **Task**. You can speci
 **Task** is used as an input for the next **Task** using the **from** property.
 **Pipelines** offer the same variable substitution as **Tasks**.
 
-Create this file: **tutorial-pipeline.yaml**{{execute}}
+Create this file: `touch tutorial-pipeline.yaml`{{execute}}
 
 Go to the **tutorial-pipeline.yaml**  editor and copy and paste this yaml:
 
@@ -52,7 +52,7 @@ Once you saved this file you can apply it to the Kubernetes Cluster:
 
 The above **Pipeline** is referencing a **Task** called **deploy-using-kubectl** defined as follows:
 
-Create this file: `deploy-using-kubectl-task.yaml`{{execute}}
+Create this file: `touch deploy-using-kubectl-task.yaml`{{execute}}
 
 Go to the **deploy-using-kubectl-task.yaml**  editor and copy and paste this yaml:
 

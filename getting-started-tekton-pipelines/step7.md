@@ -5,18 +5,10 @@ permissions to your **ServiceAccount**.
 
 First, create a new role called **tutorial-role**:
 
-```bash
-kubectl create clusterrole tutorial-role \
-               --verb=* \
-               --resource=pods,deployments,deployments.apps
-```
+`kubectl create clusterrole tutorial-role --verb=* --resource=pods,deployments,deployments.apps`{{execute}}
 
 Next, assign this new role to your **ServiceAccount**:
 
-```bash
-kubectl create clusterrolebinding tutorial-binding \
-             --clusterrole=tutorial-role \
-             --serviceaccount=default:tutorial-service
-```
+`kubectl create clusterrolebinding tutorial-binding --clusterrole=tutorial-role --serviceaccount=default:tutorial-service`{{execute}}
 
 To run your **Pipeline**, instantiate it with a **PipelineRun** as follows:

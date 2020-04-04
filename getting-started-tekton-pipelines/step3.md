@@ -41,7 +41,7 @@ Once you saved this file you can apply it to the Kubernetes Cluster:
 Create this file:
 `touch hello-world-image.yaml`{{execute}}
 
-Go to the **hello-world-image.yaml**  editor and copy and paste this yaml:
+Go to the **hello-world-image.yaml** editor and copy and paste this yaml:
 
 ```yaml
 apiVersion: tekton.dev/v1alpha1

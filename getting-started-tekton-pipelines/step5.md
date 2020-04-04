@@ -6,7 +6,7 @@ A **TaskRun** binds the inputs and outputs to already defined **PipelineResource
 sets values for variable substitution parameters, and executes the **Steps** in the **Task**.
 
 Create this file:
-`build-and-push-docker-image-from-git-task-run.yaml`{{execute}}
+`touch build-and-push-docker-image-from-git-task-run.yaml`{{execute}}
 
 Go to the **build-and-push-docker-image-from-git-task-run.yaml**  editor and copy and paste this yaml:
 

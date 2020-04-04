@@ -2,10 +2,10 @@
 
 You are now ready to create your first **PipelineRun**!
 
-To run your `Pipeline`, instantiate it with a [`PipelineRun`](pipelineruns.md) as follows:
+To run your **Pipeline**, instantiate it with a **PipelineRun** as follows:
 
 Create this file:
-`tutorial-pipeline-run-1.yaml`{{execute}}
+`touch tutorial-pipeline-run-1.yaml`{{execute}}
 
 Go to the **tutorial-pipeline-run-1.yaml**  editor and copy and paste this yaml:
 
