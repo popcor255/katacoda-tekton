@@ -29,13 +29,11 @@ spec:
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
-  name: hello-world-git
+  name: hello-world-image
 spec:
-  type: git
+  type: image
   params:
-    - name: revision
-      value: master
     - name: url
-      value: https://github.com/popcor255/python-flask-docker-hello-world
+      value: docker.io/<your docker hub username>/hello-world
 ```
 
