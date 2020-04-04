@@ -5,6 +5,8 @@ along with the corresponding inputs and outputs for each **Task**. You can speci
 **Task** is used as an input for the next **Task** using the **from** property.
 **Pipelines** offer the same variable substitution as **Tasks**.
 
+You are going to create a **Pipeline** that will build, push, and deploy a docker image onto your Kubernetes Cluster.
+
 Create this file: `touch tutorial-pipeline.yaml`{{execute}}
 
 Go to the **tutorial-pipeline.yaml**  editor and copy and paste this yaml:
@@ -31,7 +33,7 @@ spec:
       resources:
         inputs:
           - name: source
-            resource: git
+            resource: source
         outputs:
           - name: image
             resource: image

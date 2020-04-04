@@ -1,15 +1,18 @@
 ### Configuring Resources and Credentials for Tasks
 
-In the following example, you can see a `Task` definition with the `git` input and `image` output
-introduced earlier. The arguments of the `Task` command support variable substitution so that
-the `Task` definition is constant and the value of parameters can change during runtime.
+In the following example, you can see a **Task** definition with the **git** input and **image** output
+introduced earlier. The arguments of the **Task** command support variable substitution so that
+the **Task** definition is constant and the value of parameters can change during runtime.
+
+You are going to create a task that will build a docker image from the source code.
+The Task will take that image and push it to an image registry like Docker Hub.
 
 You will need this task in the next step.
 
 Create this file:
-`touch build-and-push-docker-image-from-git-task-run.yaml`{{execute}}
+`touch build-and-push-docker-image-from-git-task.yaml`{{execute}}
 
-Go to the **build-and-push-docker-image-from-git-task-run.yaml** editor and copy and paste this yaml:
+Go to the **build-and-push-docker-image-from-git-task.yaml** editor and copy and paste this yaml:
 
 ```yaml
 apiVersion: tekton.dev/v1beta1
@@ -71,7 +74,7 @@ spec:
 ```
 
 Once you saved this file you can apply it to the Kubernetes Cluster:
-`kubectl apply -f build-and-push-docker-image-from-git-task-run.yaml`{{execute}}
+`kubectl apply -f build-and-push-docker-image-from-git-task.yaml`{{execute}}
 
 Before you can create your `TaskRun`, you must create a `secret` to push your image
 to your desired image registry.
