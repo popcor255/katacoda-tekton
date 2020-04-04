@@ -2,8 +2,8 @@
 
 You are now ready to use the **Task** for another **TaskRun**!
 
-A **TaskRun** binds the inputs and outputs to already defined **PipelineResources**, sets values
-for variable substitution parameters, and executes the **Steps** in the **Task**.
+A **TaskRun** binds the inputs and outputs to already defined **PipelineResources**, sets the **Service Account Name**
+sets values for variable substitution parameters, and executes the **Steps** in the **Task**.
 
 Create this file:
 `build-and-push-docker-image-from-git-task-run.yaml`{{execute}}
