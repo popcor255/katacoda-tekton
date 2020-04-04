@@ -103,4 +103,4 @@ secrets:
 ```
 
 Once you saved this file you can apply it to the Kubernetes Cluster:
-`kubectl apply -f tutorial-service.yaml`{{execute}}
+`kubectl apply -f tutorial-service-account.yaml`{{execute}}
