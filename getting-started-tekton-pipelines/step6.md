@@ -4,10 +4,10 @@
 
 A **Pipeline** defines an ordered series of **Tasks** that you want to execute
 along with the corresponding inputs and outputs for each **Task**. You can specify whether the output of one
-**Task** is used as an input for the next `Task` using the [`from`](pipelines.md#from) property.
-`Pipelines` offer the same variable substitution as `Tasks`.
+**Task** is used as an input for the next **Task** using the **from** property.
+**Pipelines** offer the same variable substitution as **Tasks**.
 
-Create this file: `tutorial-pipeline.yaml`{{execute}}
+Create this file: **tutorial-pipeline.yaml**{{execute}}
 
 Go to the **tutorial-pipeline.yaml**  editor and copy and paste this yaml:
 
@@ -48,7 +48,7 @@ spec:
               - build-and-push-to-dockerhub
 ```
 
-The above `Pipeline` is referencing a `Task` called `deploy-using-kubectl` defined as follows:
+The above **Pipeline** is referencing a **Task** called **deploy-using-kubectl** defined as follows:
 
 Create this file: `deploy-using-kubectl-task.yaml`{{execute}}
 
