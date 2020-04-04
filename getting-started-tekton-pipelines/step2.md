@@ -23,7 +23,7 @@ spec:
 ```
 
 Once you saved the task apply it to the Kubernetes Cluster:
-`kubectl apply -f echo-hello-world-task.yaml`{{execute}}
+`kubectl apply -f echo-hello-world-task-run.yaml`{{execute}}
 
 To run this **Task**, instantiate it using a **TaskRun**:
 
