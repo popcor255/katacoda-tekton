@@ -20,10 +20,10 @@ spec:
     - name: revision
       value: master
     - name: url
-      value: https://github.com/popcor255/python-flask-docker-hello-world #configure: change if you want to build something else, perhaps from your own local git repository.
+      value: https://github.com/popcor255/python-flask-docker-hello-world
 ```
 
-The ***image resource*** specifies the repository to which the image built by the **Task** will be pushed:
+The **image resource** specifies the repository to which the image built by the **Task** will be pushed:
 
 ```yaml
 apiVersion: tekton.dev/v1alpha1
@@ -34,5 +34,5 @@ spec:
   type: image
   params:
     - name: url
-      value: docker.io/<your docker hub username>/hello-world #configure: replace with where the image should go: perhaps your local registry or Dockerhub with a secret and configured service account
+      value: docker.io/<your docker hub username>/hello-world
 ```
