@@ -28,7 +28,7 @@ Once you saved the task apply it to the Kubernetes Cluster:
 To run this **Task**, instantiate it using a **TaskRun**:
 
 Create this file:
-`touch echo-hello-world-task.yaml`{{execute}}
+`touch echo-hello-world-task-run.yaml`{{execute}}
 
 
 Go to the **echo-hello-world-task.yaml** in the editor and copy and paste this yaml:
