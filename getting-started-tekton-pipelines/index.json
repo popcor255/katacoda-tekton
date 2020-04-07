@@ -1,6 +1,6 @@
 {
-  "title": "Tekton Pipelines",
-  "description": "Getting started with Tekton Pipelines.",
+  "title": "Getting started with Tekton Pipelines",
+  "description": "This guide will show you how to create a task, taskrun, pipeline, pipelineresource and pipelinerun",
   "difficulty": "Beginner",
   "time": "24 minutes",
   "details": {
