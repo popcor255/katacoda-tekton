@@ -26,10 +26,6 @@ spec:
     - name: build-and-push-to-dockerhub
       taskRef:
         name: build-and-push-docker-image-from-git
-      params:
-        - name: DOCKERFILE
-          value: ./Dockerfile
-          #configure: this will change the default value of your params in your tasks
       resources:
         inputs:
           - name: source

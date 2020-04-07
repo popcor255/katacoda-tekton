@@ -24,15 +24,6 @@ spec:
     - name: BUILDER_IMAGE
       description: The location of the builder image
       default: quay.io/buildah/stable:v1.14.3
-    - name: DOCKERFILE
-      description: Path to the Dockerfile to build.
-      default: ./Dockerfile
-    - name: CONTEXT
-      description: Path to the directory to use as context.
-      default: .
-    - name: TLSVERIFY
-      description: Verify the TLS on the registry endpoint (for push/pull to a non-TLS registry)
-      default: "false"
   resources:
     inputs:
       - name: source
@@ -49,25 +40,14 @@ spec:
         - -c
         - |
           set -e
-          SHORT_GIT_HASH="$(cat .git/FETCH_HEAD | awk '{print substr($1,0,7)}')"
           IMAGE_NAME="$(outputs.resources.image.url)"
-          NEW_IMAGE_ID="$IMAGE_NAME:$SHORT_GIT_HASH"
-          NEW_IMAGE_ID="$(echo $NEW_IMAGE_ID | sed s/\$NAMESPACE/$NAMESPACE/)"
-          echo "Building Image $NEW_IMAGE_ID"
-          buildah bud --tls-verify="$(inputs.params.TLSVERIFY)" --layers -f "$(inputs.params.DOCKERFILE)" -t "$NEW_IMAGE_ID"  -t "$IMAGE_NAME:latest" "$(inputs.params.CONTEXT)"
-          echo "Pushing Image $NEW_IMAGE_ID"
-          buildah push --tls-verify="$(inputs.params.TLSVERIFY)" "$NEW_IMAGE_ID" "docker://$NEW_IMAGE_ID"
-          buildah push --tls-verify="$(inputs.params.TLSVERIFY)" "$IMAGE_NAME:latest" "docker://$IMAGE_NAME:latest"
+          buildah bud --tls-verify="false" --layers -f "./Dockerfile" -t "$IMAGE_NAME:latest" .
+          buildah push --tls-verify="false" "$IMAGE_NAME:latest" "docker://$IMAGE_NAME:latest"
       securityContext:
         privileged: true
       volumeMounts:
         - name: varlibcontainers
           mountPath: /var/lib/containers
-      env:
-        - name: NAMESPACE
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.namespace
   volumes:
     - name: varlibcontainers
       emptyDir: {}

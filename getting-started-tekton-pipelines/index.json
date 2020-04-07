@@ -46,7 +46,7 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "vscode"
   },
   "backend": {
     "imageid": "minikube-running"
