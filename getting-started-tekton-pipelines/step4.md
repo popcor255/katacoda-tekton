@@ -59,12 +59,12 @@ Once you saved this file you can apply it to the Kubernetes Cluster:
 Before you can create your `TaskRun`, you must create a `secret` to push your image
 to your desired image registry.
 
-**Note** You can get your Docker access token at [https://hub.docker.com/settings/security)](https://hub.docker.com/settings/security).
+**Note** You can get your Docker access token at [https://hub.docker.com/settings/security](https://hub.docker.com/settings/security).
 
 ```bash
 kubectl create secret docker-registry regcred \
                     --docker-server=docker.io \
-                    --docker-username=<your-name> \
+                    --docker-username=<your-username> \
                     --docker-password=<your-token> \
                     --docker-email=<your-email>
 ```
